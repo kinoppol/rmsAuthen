@@ -23,6 +23,7 @@ $result=$db->query($SQL);
 $data=$result->fetch_assoc();
 $name=iconv('tis-620','utf-8',$data['people_name']);
 $surname=iconv('tis-620','utf-8',$data['people_surname']);
+$fullname=$name.' '.$surname;
 $pic=iconv('tis-620','utf-8',$data['people_pic']);
 if(empty($pic)){
 	$picture_url='../picture.png';
@@ -53,25 +54,7 @@ if(empty($pic)){
   height:100px;
   object-fit:cover;"></div>
 	  <form name="login_form" method="post" action="$PORTAL_ACTION$">
-		<input type="text" name="auth_user" placeholder="User" id="auth_user" required>
-		<input type="password" name="auth_pass" placeholder="Password" id="auth_pass" required>
-		  <div class="login-help">
-			<ul class="list">
-				<li class="list__item">
-				  <label class="label--checkbox">
-					  <input type="checkbox" class="checkbox" required>
-					  <span>ฉันยอมรับ <a target="_blank" rel="noopener" href="captiveportal-terms.pdf">ข้อตกลงการใช้งาน</a></span>
-				  </label>
-				</li>
-				<li class="list__item">
-					<label class="label--checkbox">
-						<span>ไม่ทราบรหัสผ่านหรือ? <a target="_blank" rel="noopener" href="https://bncc.ac.th/web/บริการสารสนเทศ/#authen">คลิก</a></span>
-					</label>
-				  </li>
-			</ul>
-		  </div>
-		<input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
-		<input type="submit" name="accept" class="login login-submit" value="เข้าถึงอินเทอร์เน็ต" id="login">
+		<button class="btn btn-primary">ลงชื่อเข้าใช้ด้วยชื่อ<?php print $fullname; ?></button>
 	  </form>
 	</div>
 </div>
