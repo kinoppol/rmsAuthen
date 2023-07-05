@@ -22,7 +22,7 @@ $title=$data['config_value'];
 
 <head>
 	<script src="https://rms.bncc.ac.th/portal/captiveportal-jquery-3.4.0.min.js" type="text/javascript" ></script>
-  <meta charset="UTF-8">
+  <meta charset="tis620">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title><?php print $title; ?></title>
