@@ -15,7 +15,7 @@ $school_name=iconv('tis-620','utf-8',$data['config_value']);
 $SQL='select config_value from config where config_id=3';
 $result=$db->query($SQL);
 $data=$result->fetch_assoc();
-$title=mb_convert_encoding($data['config_value'], 'UTF-8', 'TIS-620');
+$title=iconv('tis-620','utf-8',$data['config_value']);
 ?>
 <!DOCTYPE html>
 <html>
