@@ -9,7 +9,7 @@ require_once('db.php');
 $SQL='select config_value from config where config_id=500';
 $result=$db->query($SQL);
 $data=$result->fetch_assoc();
-$school_name=mb_convert_encoding($data['config_value'], 'TIS-620','UTF-8');
+$school_name=mb_convert_encoding($data['config_value'], 'UTF-8', 'TIS-620');
 
 
 $SQL='select config_value from config where config_id=3';
