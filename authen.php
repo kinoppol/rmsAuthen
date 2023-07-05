@@ -2,6 +2,7 @@
 ob_start();
 session_start();
 header('Content-Type: text/html; charset=utf-8');
+require_once('db.php');
 $SQL='select config_value from config where config_id=500';
 $result=$db->query($SQL);
 $data=$result->fetch_assoc();
