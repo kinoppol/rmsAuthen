@@ -2,9 +2,9 @@
 ob_start();
 session_start();
 header('Content-Type: text/html; charset=utf-8');
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 require_once('db.php');
 $SQL='select config_value from config where config_id=500';
 $result=$db->query($SQL);
