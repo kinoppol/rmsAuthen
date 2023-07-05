@@ -54,7 +54,7 @@ if(empty($pic)){
   height:100px;
   object-fit:cover;"></div>
 	  <form name="login_form" method="post" action="$PORTAL_ACTION$">
-		<button class="login login-submit">ลงชื่อเข้าใช้ด้วยชื่อ<?php print $fullname; ?></button>
+		<button class="login login-submit">ลงชื่อเข้าใช้ด้วยชื่อ "<?php print $fullname; ?>"</button>
 	  </form>
 	</div>
 </div>
