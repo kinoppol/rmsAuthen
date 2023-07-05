@@ -1,1 +1,4 @@
-<?php print_r($_SESSION);
+<?php 
+ob_start();
+session_start();
+print_r($_SESSION);
