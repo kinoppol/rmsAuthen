@@ -51,7 +51,7 @@ if(empty($pic)){
  		<h3><?php print $school_name; ?></h3>
 		<div style="text-align:center"><img src="<?php print $picture_url; ?>" style="border-radius: 50%;width:300px;
   height:300px;
-  object-fit:cover;" width="100"></div>
+  object-fit:cover;" width="50"></div>
 	  <form name="login_form" method="post" action="$PORTAL_ACTION$">
 		<input type="text" name="auth_user" placeholder="User" id="auth_user" required>
 		<input type="password" name="auth_pass" placeholder="Password" id="auth_pass" required>
