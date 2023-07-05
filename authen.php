@@ -9,12 +9,12 @@ require_once('db.php');
 $SQL='select config_value from config where config_id=500';
 $result=$db->query($SQL);
 $data=$result->fetch_assoc();
-$school_name=$data['config_value'];
+$school_name=iconv('UTF-8','TIS-620',$data['config_value']);
 
 $SQL='select config_value from config where config_id=3';
 $result=$db->query($SQL);
 $data=$result->fetch_assoc();
-$title=$data['config_value'];
+$title=iconv('UTF-8','TIS-620',$data['config_value']);
 ?>
 <!DOCTYPE html>
 <html>
