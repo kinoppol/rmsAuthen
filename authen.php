@@ -6,6 +6,7 @@ header('Content-Type: text/html; charset=utf-8');
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 require_once('db.php');
+$userid=$_SESSION['userid'];
 $SQL='select config_value from config where config_id=500';
 $result=$db->query($SQL);
 $data=$result->fetch_assoc();
@@ -16,6 +17,18 @@ $SQL='select config_value from config where config_id=3';
 $result=$db->query($SQL);
 $data=$result->fetch_assoc();
 $title=iconv('tis-620','utf-8',$data['config_value']);
+
+$SQL='select * from people where people_id='.$userid;
+$result=$db->query($SQL);
+$data=$result->fetch_assoc();
+$name=iconv('tis-620','utf-8',$data['people_name']);
+$surname=iconv('tis-620','utf-8',$data['people_surname']);
+$pic=iconv('tis-620','utf-8',$data['people_pic']);
+if(empty($pic)){
+	$picture_url='../picture.png';
+}else{
+	$picture_url='../file/'.$pic;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,6 +49,7 @@ $title=iconv('tis-620','utf-8',$data['config_value']);
 	<div class="login-card">
 		<img src="../rms-icon.png"/><br>
  		<h3><?php print $school_name; ?></h3>
+		<div style="text-align:center"><img src="<?php print $picture_url; ?>"></div>
 	  <form name="login_form" method="post" action="$PORTAL_ACTION$">
 		<input type="text" name="auth_user" placeholder="User" id="auth_user" required>
 		<input type="password" name="auth_pass" placeholder="Password" id="auth_pass" required>
