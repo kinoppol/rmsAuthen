@@ -34,7 +34,7 @@ $title=iconv('tis-620','utf-8',$data['config_value']);
 <body bgcolor="#AACCFF">
 <div id="content">
 	<div class="login-card">
-		<img src="http://www.rvc.ac.th/_nuxt/img/rlogo.47aead8.png"/><br>
+		<img src="../rms-icon.png"/><br>
  		<h3><?php print $school_name; ?></h3>
 	  <form name="login_form" method="post" action="$PORTAL_ACTION$">
 		<input type="text" name="auth_user" placeholder="User" id="auth_user" required>
