@@ -1,3 +1,8 @@
+<?php 
+ob_start();
+session_start();
+header('Content-Type: text/html; charset=utf-8');
+?>
 <!DOCTYPE html>
 <html>
 
