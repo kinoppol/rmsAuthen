@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 header('Content-Type: text/html; charset=utf-8');
-print_r($_SESSION);
+//print_r($_SESSION);
 if(empty($_SESSION['userid'])){
-    echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" />คุณยังไม่ได้เข้าสู่ระบบ โปรดรอสักครู่<meta http-equiv="refresh" content="2;url=../">';
+    echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" />คุณยังไม่ได้เข้าสู่ระบบ โปรดรอสักครู่..<meta http-equiv="refresh" content="2;url=../">';
 }
