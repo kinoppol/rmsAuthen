@@ -27,7 +27,7 @@ $pic=iconv('tis-620','utf-8',$data['people_pic']);
 if(empty($pic)){
 	$picture_url='../picture.png';
 }else{
-	$picture_url='../file/'.$pic;
+	$picture_url='../files/'.$pic;
 }
 ?>
 <!DOCTYPE html>
